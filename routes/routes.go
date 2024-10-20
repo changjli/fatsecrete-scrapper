@@ -2,6 +2,7 @@ package routes
 
 import (
 	fatsecret_controller "scrapper/atom/fatsecrete/controllers"
+	yandex_image_controller "scrapper/atom/yandex_image/controllers"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
@@ -22,6 +23,7 @@ func SetupRoutes() *gin.Engine {
 	api := route.Group("/api")
 
 	api.POST("/fatsecrete", fatsecret_controller.InsertByName)
+	api.GET("/yandex-image", yandex_image_controller.InsertAll)
 
 	return route
 }
