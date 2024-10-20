@@ -23,7 +23,7 @@ func SetupRoutes() *gin.Engine {
 	api := route.Group("/api")
 
 	api.POST("/fatsecrete", fatsecret_controller.InsertByName)
-	api.GET("/yandex-image", yandex_image_controller.InsertAll)
+	api.GET("/yandex-image", yandex_image_controller.InsertAllV2)
 
 	return route
 }
